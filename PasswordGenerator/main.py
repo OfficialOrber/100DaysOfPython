@@ -8,11 +8,11 @@ digits = '0123456789'
 def generate_password(numLetters, numOfSymbols, numOfDigits):
     password = []
     for i in range(int(numLetters)):
-        password.append(str(random.choice(small_letters)))
+        password.append(random.choice(small_letters))
     for i in range(int(numOfSymbols)):
-        password.append(str(random.choice(special_chars)))
+        password.append(random.choice(special_chars))
     for i in range(int(numOfDigits)):
-        password.append(str(random.choice(digits)))
+        password.append(random.choice(digits))
 
     random.shuffle(password)    
     return ''.join(password)
