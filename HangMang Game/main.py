@@ -2,7 +2,6 @@ from operator import le
 import random
 from hangman_art import stages, logo
 from hangman_words import word_list
-import os
 
 lives = 6
 
@@ -10,7 +9,6 @@ chosen_word = random.choice(word_list)
 wordLength = len(chosen_word)
 display = ['_']*wordLength
 gameOn = True
-clear = lambda: os.system('cls')
 
 print(logo)
 print(stages[lives])
@@ -37,5 +35,3 @@ while(gameOn):
     if(chosen_word == ''.join(display)):
         gameOn = False
         print("You win.")
-    clear()
-    
