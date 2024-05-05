@@ -21,4 +21,5 @@ while run_program:
     caesar(text, shift, direction)
 
     if (input("Type 'yes' if you want to go again. Otherwise type 'no'.\n")) != 'yes':
+        print('Good Bye.')
         run_program = False
