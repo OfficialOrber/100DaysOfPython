@@ -64,7 +64,7 @@ def main():
                     item_num+=1
                 
                 item_to_auct = input('What item will you like to start the bidding for?\nType the item name, and watchout for typos.\n')
-                i
+
                 if():
                     start_auction(item_to_auct)
                     continue_program = False
