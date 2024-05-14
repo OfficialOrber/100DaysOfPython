@@ -16,18 +16,18 @@ for turtle_index in range(0, 6):
     new_turtle.goto(-230, y_axis[turtle_index])
     all_turtles.append(new_turtle)
 
-print(user_bet)
-
 if user_bet:
     is_race_on = True
 
 while is_race_on:
     for turtle_selected in all_turtles:
         turtle_selected.forward(random.randint(0, 10))
-        if turtle_selected.position()[0] > 225:
+        if turtle_selected.xcor() > 225:
             is_race_on = False
             winning_colour = turtle_selected.pencolor()
-            is_winner = 'You Won!' if winning_colour == user_bet else "You Lost!"
-            print(is_winner)
+            if winning_colour == user_bet:
+                print("Congratulations you are the winner")
+            else:
+                print(f"You lost, the winning colour was: {winning_colour}")
 
 screen.exitonclick()
